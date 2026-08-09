@@ -1,0 +1,13 @@
+Problem: Contains Duplicate (LC 217)
+
+Pattern: HashSet
+
+Approach:
+
+Traverse array.
+Store seen elements in a HashSet.
+If current element already exists in set, return true.
+
+Time Complexity: O(n)
+
+Space Complexity: O(n)

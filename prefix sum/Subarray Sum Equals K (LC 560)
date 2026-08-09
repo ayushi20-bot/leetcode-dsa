@@ -1,0 +1,22 @@
+Problem: Subarray Sum Equals K (LC 560)
+
+Pattern: Prefix Sum + Hash Map
+
+Approach
+Store mp[0] = 1 to represent a prefix sum of 0 before the array starts.
+Traverse the array while maintaining prefixSum.
+
+Calculate:
+
+need = prefixSum - k;
+
+If need exists in the map:
+
+count += mp[need];
+
+Store the current prefix sum:
+
+mp[prefixSum]++;
+Return count.
+Time Complexity: O(n)
+Space Complexity: O(n)

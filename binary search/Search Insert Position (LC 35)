@@ -1,0 +1,28 @@
+Problem: Search Insert Position (LC 35)
+
+Pattern: Binary Search
+
+Approach:
+
+1. Initialize:
+
+   * left = 0
+   * right = nums.size() - 1
+2. While `left <= right`:
+
+   * Find the middle index:
+     `mid = left + (right - left) / 2`
+3. If `nums[mid] == target`:
+
+   * Return `mid`.
+4. If `nums[mid] < target`:
+
+   * Search the right half by setting `left = mid + 1`.
+5. Otherwise:
+
+   * Search the left half by setting `right = mid - 1`.
+6. If the target is not found, return `left` because it represents the correct insertion position.
+
+Time Complexity: O(log n)
+
+Space Complexity: O(1)

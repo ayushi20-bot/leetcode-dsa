@@ -1,0 +1,13 @@
+Problem: Running Sum of 1D Array (LC 1480)
+
+Pattern: Prefix Sum / Array Traversal
+
+Approach:
+
+Start from index 1.
+Add previous element's running sum to current element.
+Update array in-place.
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)

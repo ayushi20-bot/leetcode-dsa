@@ -1,0 +1,18 @@
+Problem: Maximum Average Subarray I (LC 643)
+
+Pattern: Fixed Size Sliding Window
+
+Approach:
+
+Calculate the sum of the first k elements.
+Store it as maxSum.
+Slide the window one element at a time.
+For each new window:
+Remove the outgoing element (nums[i-k]).
+Add the incoming element (nums[i]).
+Update maxSum.
+Return (double)maxSum / k.
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)

@@ -1,0 +1,15 @@
+Problem: Valid Anagram (LC 242)
+
+Pattern: HashMap Frequency Count
+
+Approach:
+
+1. If lengths differ, return false.
+2. Count frequencies of characters in the first string.
+3. Decrease frequencies using the second string.
+4. If any frequency is not zero, return false.
+5. Otherwise return true.
+
+Time Complexity: O(n)
+
+Space Complexity: O(k)

@@ -1,0 +1,22 @@
+Problem: Maximum Subarray (LC 53)
+
+Pattern: Kadane's Algorithm
+
+Approach:
+Maintain two variables:
+
+currentSum = maximum subarray sum ending at current index
+maxSum = maximum subarray sum seen so far
+
+For each element:
+currentSum = max(nums[i], currentSum + nums[i])
+
+Update:
+maxSum = max(maxSum, currentSum)
+
+Return:
+maxSum
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)

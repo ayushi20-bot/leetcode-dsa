@@ -1,0 +1,24 @@
+Problem: Longest Substring Without Repeating Characters (LC 3)
+
+Pattern: Variable Size Sliding Window + Hash Set
+
+Approach:
+
+Use two pointers:
+left → start of the window.
+right → end of the window.
+Use an unordered_set to store the characters in the current window.
+For each right:
+While the current character already exists in the set:
+Remove s[left] from the set.
+Increment left.
+Insert s[right] into the set.
+
+Update the maximum window length using:
+
+maxLen = max(maxLen, right - left + 1);
+Return maxLen.
+
+Time Complexity: O(n)
+
+Space Complexity: O(min(n, 128)) (or O(min(n, alphabet size)))

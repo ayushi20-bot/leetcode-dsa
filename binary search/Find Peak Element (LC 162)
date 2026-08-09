@@ -1,0 +1,31 @@
+Problem: Find Peak Element (LC 162)
+
+Pattern: Binary Search (Search on Slope)
+
+Approach:
+
+1. Initialize:
+
+   * left = 0
+   * right = nums.size() - 1
+2. While `left < right`:
+
+   * Find the middle index:
+     `mid = left + (right - left) / 2`
+3. Compare `nums[mid]` with `nums[mid + 1]`.
+4. If `nums[mid] < nums[mid + 1]`:
+
+   * The array is going uphill.
+   * A peak must exist on the right side.
+   * Set `left = mid + 1`.
+5. Otherwise:
+
+   * The array is going downhill.
+   * `mid` could be the peak.
+   * Set `right = mid`.
+6. Repeat until `left == right`.
+7. Return `left` (or `right`), which is the index of a peak element.
+
+Time Complexity: O(log n)
+
+Space Complexity: O(1)

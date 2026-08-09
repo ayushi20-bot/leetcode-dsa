@@ -1,0 +1,18 @@
+Problem: Move Zeroes (LC 283)
+
+Pattern:
+Two Pointers (Read Pointer + Write Point)
+
+Approach:
+
+1. Initialize `left = 0`.
+   * `left` represents the position where the next non-zero element should be placed.
+2. Traverse the array using `right`.
+3. If `nums[right]` is non-zero:
+   * Swap `nums[left]` and `nums[right]`.
+   * Increment `left`.
+4. Ignore zeroes.
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)

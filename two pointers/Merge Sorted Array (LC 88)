@@ -1,0 +1,21 @@
+Problem: Merge Sorted Array (LC 88)
+
+Pattern: Two Pointers (Merge from End)
+
+Approach:
+
+1. Initialize:
+
+   * i = m - 1 (last valid element of nums1)
+   * j = n - 1 (last element of nums2)
+   * k = m + n - 1 (last position of nums1)
+2. Compare `nums1[i]` and `nums2[j]`.
+3. Place the larger element at `nums1[k]`.
+4. Move the corresponding pointer (`i` or `j`) and decrement `k`.
+5. Repeat until either array is exhausted.
+6. If elements remain in `nums2`, copy them into `nums1`.
+7. Return (the array is modified in-place).
+
+Time Complexity: O(m + n)
+
+Space Complexity: O(1)

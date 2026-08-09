@@ -1,0 +1,18 @@
+Problem: Maximum Number of Vowels in a Substring of Given Length (LC 1456)
+
+Pattern: Fixed Size Sliding Window
+
+Approach:
+
+Create a helper function isVowel() to check whether a character is a vowel.
+Count the vowels in the first window of size k.
+Store the count in maxVowels.
+Slide the window one character at a time:
+If the outgoing character (s[i-k]) is a vowel, decrement vowelCount.
+If the incoming character (s[i]) is a vowel, increment vowelCount.
+Update maxVowels.
+Return maxVowels.
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)

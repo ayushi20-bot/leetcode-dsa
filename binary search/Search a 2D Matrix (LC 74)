@@ -1,0 +1,25 @@
+Problem: Search a 2D Matrix (LC 74)
+
+Pattern: Binary Search (Virtual 1D Array)
+
+Approach:
+
+Find the number of rows and columns.
+Treat the matrix as a single sorted array.
+Initialize:
+left = 0
+right = rows * cols - 1
+While left <= right:
+Find mid.
+Convert mid to 2D indices:
+row = mid / cols
+col = mid % cols
+Compare matrix[row][col] with target.
+If equal → return true.
+If smaller → search right half.
+If larger → search left half.
+If the loop ends, return false.
+
+Time Complexity: O(log(rows × cols))
+
+Space Complexity: O(1)

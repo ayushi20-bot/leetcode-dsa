@@ -1,0 +1,40 @@
+Problem: Search in Rotated Sorted Array (LC 33)
+
+Pattern: Binary Search (Rotated Sorted Array)
+
+Approach:
+
+1. Initialize:
+
+   * `left = 0`
+   * `right = nums.size() - 1`
+2. While `left <= right`:
+
+   * Find the middle index:
+     `mid = left + (right - left) / 2`
+3. If `nums[mid] == target`:
+
+   * Return `mid`.
+4. Check which half is sorted:
+
+   * If `nums[left] <= nums[mid]`, the left half is sorted.
+
+     * If the target lies between `nums[left]` and `nums[mid]`:
+
+       * `right = mid - 1`
+     * Otherwise:
+
+       * `left = mid + 1`
+   * Otherwise, the right half is sorted.
+
+     * If the target lies between `nums[mid]` and `nums[right]`:
+
+       * `left = mid + 1`
+     * Otherwise:
+
+       * `right = mid - 1`
+5. If the target is not found, return `-1`.
+
+Time Complexity: O(log n)
+
+Space Complexity: O(1)

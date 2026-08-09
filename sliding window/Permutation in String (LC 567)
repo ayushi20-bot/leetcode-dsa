@@ -1,0 +1,22 @@
+Problem: Permutation in String (LC 567)
+
+Pattern: Fixed Size Sliding Window + Frequency Array
+
+Approach:
+
+If s1 is longer than s2, return false.
+Create two frequency arrays of size 26:
+freq1 for s1
+freq2 for the current window in s2
+Fill both arrays for the first window of length s1.length().
+Compare the frequency arrays.
+Slide the window:
+Remove the outgoing character.
+Add the incoming character.
+Compare the frequency arrays after each slide.
+If they ever match, return true.
+Otherwise, return false.
+
+Time Complexity: O(n)
+
+Space Complexity: O(1) (the frequency arrays always have size 26)

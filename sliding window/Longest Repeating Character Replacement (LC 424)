@@ -1,0 +1,20 @@
+Problem: Longest Repeating Character Replacement (LC 424)
+
+Pattern: Variable Size Sliding Window + Hash Map
+
+Approach:
+
+Use a frequency map to count characters in the current window.
+Keep track of the highest frequency (maxFreq) seen in the window.
+Expand the window by moving right.
+If:
+(window size - maxFreq) > k
+the window is invalid, so:
+Decrease the frequency of s[left].
+Move left forward.
+Update the maximum window length.
+Return the maximum length.
+
+Time Complexity: O(n)
+
+Space Complexity: O(1) (since there are only a limited number of possible characters, e.g., uppercase English letters)

@@ -1,0 +1,20 @@
+Problem: Remove First and Last Position of Element in Sorted Array (LC 34)
+
+Pattern: Binary Search (Boundary Search)
+
+Approach:
+
+Perform the first binary search to find the first occurrence.
+If nums[mid] == target:
+Save mid as first.
+Continue searching left (right = mid - 1).
+Reset left and right.
+Perform the second binary search to find the last occurrence.
+If nums[mid] == target:
+Save mid as last.
+Continue searching right (left = mid + 1).
+Return {first, last}.
+
+Time Complexity: O(log n) + O(log n) = O(log n)
+
+Space Complexity: O(1)

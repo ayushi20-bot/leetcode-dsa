@@ -1,0 +1,19 @@
+Problem: Valid Palindrome (LC 125)
+
+Pattern:
+Two Pointers
+
+Approach:
+
+1. Initialize two pointers:
+   * left = 0
+   * right = s.length() - 1
+2. Skip all non-alphanumeric characters from both sides using while loops.
+3. Compare lowercase versions of both characters.
+4. If they are different, return false.
+5. Otherwise move both pointers toward the center.
+6. If the loop completes, return true.
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)

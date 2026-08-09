@@ -1,0 +1,15 @@
+Problem: Single Number (LC 136)
+
+Pattern: Frequency Counting (HashMap)
+
+Approach
+
+1. Create a HashMap.
+2. Count the frequency of every number.
+3. Traverse the HashMap.
+4. Return the number whose frequency is 1.
+
+Time Complexity: O(n)
+
+Space Complexity: O(n)
+

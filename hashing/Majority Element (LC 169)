@@ -1,0 +1,14 @@
+Problem: Majority Element (LC 169)
+
+Pattern: Frequency Counting (HashMap)
+
+Approach:
+
+1. Create a HashMap to store the frequency of each number.
+2. Traverse the array and increase the frequency of every element.
+3. Traverse the HashMap.
+4. If any element's frequency is greater than `n/2`, return that element.
+
+Time Complexity: O(n)
+
+Space Complexity: O(n)

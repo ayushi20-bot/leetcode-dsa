@@ -1,0 +1,35 @@
+Problem: Two Sum (LC 1)
+
+First Thought: Brute Force
+
+Approach:
+Check every pair of elements.
+
+Time Complexity: O(n²)
+
+Space Complexity: O(1)
+
+Limitation:
+Too slow for large inputs.
+
+Next Step:
+Optimize using HashMap.
+
+****************************************************************
+
+Problem: Two Sum (LC 1)
+
+Pattern: HashMap
+
+Key Idea:
+For each number, calculate:
+need = target - currentNumber
+
+Check if need already exists in HashMap.
+
+Store:
+number -> index
+
+Time Complexity: O(n)
+
+Space Complexity: O(n)

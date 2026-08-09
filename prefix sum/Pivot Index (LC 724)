@@ -1,0 +1,33 @@
+Problem: Pivot Index (LC 724)
+
+Pattern: Prefix Sum
+
+Approach
+Find the total sum of the array.
+Initialize leftSum = 0.
+For each index:
+
+Calculate:
+
+rightSum = totalSum - leftSum - nums[i];
+If leftSum == rightSum, return the current index.
+
+Otherwise, update:
+
+leftSum += nums[i];
+If no pivot index exists, return -1.
+Formula
+Total Sum
+=
+Left Sum
++
+Current Element
++
+Right Sum
+
+Therefore,
+
+rightSum = totalSum - leftSum - nums[i];
+
+Time Complexity : O(n)
+Space Complexity : O(1)

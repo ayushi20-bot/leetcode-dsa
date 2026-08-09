@@ -1,0 +1,18 @@
+Problem: Minimum Size Subarray Sum (LC 209)
+
+Pattern: Variable Size Sliding Window
+
+Approach:
+
+Initialize left = 0, sum = 0, and ans = INT_MAX.
+Expand the window by adding nums[right] to sum.
+While sum >= target:
+Update the minimum length using min(ans, right - left + 1).
+Remove nums[left] from sum.
+Move left forward.
+If ans is still INT_MAX, no valid subarray exists, so return 0.
+Otherwise, return ans.
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)

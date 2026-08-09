@@ -1,0 +1,31 @@
+Problem: Sqrt(x) (LC 69)
+
+Pattern: Binary Search on Answer
+
+Approach:
+
+1. If `x == 0`, return `0`.
+2. Initialize:
+
+   * `left = 1`
+   * `right = x`
+3. While `left <= right`:
+
+   * Find the middle value:
+     `mid = left + (right - left) / 2`
+   * Calculate:
+     `square = 1LL * mid * mid`
+4. If `square == x`:
+
+   * Return `mid`.
+5. If `square < x`:
+
+   * Search the right half by setting `left = mid + 1`.
+6. Otherwise:
+
+   * Search the left half by setting `right = mid - 1`.
+7. If no exact square root exists, return `right` because it is the largest integer whose square is less than or equal to `x`.
+
+Time Complexity: O(log x)
+
+Space Complexity: O(1)

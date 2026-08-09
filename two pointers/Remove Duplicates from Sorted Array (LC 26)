@@ -1,0 +1,19 @@
+Problem: Remove Duplicates from Sorted Array (LC 26)
+
+Pattern: Two Pointers (Read Pointer + Write Pointer)
+
+Approach:
+
+1. Initialize:
+   * left = 0 (last unique element)
+   * right = 1 (scans the array)
+2. Traverse the array using right.
+3. If nums[right] is different from nums[left]:
+   * Increment left.
+   * Copy nums[right] to nums[left].
+4. Continue until right reaches the end.
+5. Return left + 1 (number of unique elements).
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)

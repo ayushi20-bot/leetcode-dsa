@@ -1,0 +1,21 @@
+Problem: Find All Anagrams in a String (LC 438)
+
+Pattern: Fixed Size Sliding Window + Frequency Array
+
+Approach:
+
+If p.length() > s.length(), return an empty vector.
+Create two frequency arrays of size 26:
+freq1 for string p
+freq2 for the current window in string s
+Fill both frequency arrays for the first window of size p.length().
+If both frequency arrays are equal, store index 0.
+Slide the window one character at a time:
+Remove the outgoing character from freq2.
+Add the incoming character to freq2.
+If both frequency arrays match, store the starting index of the current window.
+Return the answer vector.
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)

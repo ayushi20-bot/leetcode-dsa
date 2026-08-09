@@ -1,0 +1,14 @@
+Problem: Intersection of Two Arrays (LC 349)
+
+Pattern: HashSet
+
+Approach:
+
+1. Store all elements of nums1 in a HashSet.
+2. Traverse nums2.
+3. If an element exists in the HashSet, add it to a result HashSet.
+4. Convert result HashSet to vector and return.
+
+Time Complexity: O(n + m)
+
+Space Complexity: O(n)

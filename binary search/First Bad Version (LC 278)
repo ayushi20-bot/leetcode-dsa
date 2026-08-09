@@ -1,0 +1,28 @@
+Problem: First Bad Version (LC 278)
+
+Pattern: Binary Search (Find First True / First Valid Position)
+
+Approach:
+
+1. Initialize:
+
+   * left = 1
+   * right = n
+2. While `left < right`:
+
+   * Find the middle index:
+     `mid = left + (right - left) / 2`
+3. If `isBadVersion(mid)` is `true`:
+
+   * The first bad version could be `mid` or before it.
+   * Set `right = mid`.
+4. Otherwise:
+
+   * The first bad version must be after `mid`.
+   * Set `left = mid + 1`.
+5. Repeat until `left == right`.
+6. Return `left` because it points to the first bad version.
+
+Time Complexity: O(log n)
+
+Space Complexity: O(1)

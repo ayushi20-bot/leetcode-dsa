@@ -1,0 +1,14 @@
+Problem: Top K Frequent Elements (LC 347)
+
+Pattern: HashMap + Max Heap (Priority Queue)
+
+Approach:
+
+1. Count frequency using HashMap.
+2. Store (frequency, number) in a Max Heap.
+3. Remove top k elements.
+4. Store numbers in answer vector.
+
+Time Complexity: O(n log n)
+
+Space Complexity: O(n)

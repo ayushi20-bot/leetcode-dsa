@@ -1,0 +1,28 @@
+Problem: Squares of a Sorted Array (LC 977)
+
+Pattern: Two Pointers (Opposite Ends)
+
+Approach:
+
+1. Initialize:
+
+   * left = 0 (start of the array)
+   * right = nums.size() - 1 (end of the array)
+   * index = nums.size() - 1 (last position of the answer array)
+2. Create an answer vector of the same size as `nums`.
+3. Compare `abs(nums[left])` and `abs(nums[right])`.
+4. If `abs(nums[left])` is greater:
+
+   * Store `nums[left] * nums[left]` at `ans[index]`.
+   * Move `left++`.
+5. Otherwise:
+
+   * Store `nums[right] * nums[right]` at `ans[index]`.
+   * Move `right--`.
+6. Decrement `index--` after placing each square.
+7. Repeat until `left > right`.
+8. Return the answer vector.
+
+Time Complexity: O(n)
+
+Space Complexity: O(n)

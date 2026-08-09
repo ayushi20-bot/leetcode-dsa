@@ -1,0 +1,28 @@
+Problem: Guess Number Higher or Lower (LC 374)
+
+Pattern: Binary Search
+
+Approach:
+
+1. Initialize:
+
+   * left = 1
+   * right = n
+2. While `left <= right`:
+
+   * Find the middle value:
+     `mid = left + (right - left) / 2`
+3. Call `guess(mid)`:
+
+   * If it returns `0`, return `mid`.
+   * If it returns `1`, the hidden number is larger.
+
+     * Set `left = mid + 1`.
+   * If it returns `-1`, the hidden number is smaller.
+
+     * Set `right = mid - 1`.
+4. Repeat until the number is found.
+
+Time Complexity: O(log n)
+
+Space Complexity: O(1)
