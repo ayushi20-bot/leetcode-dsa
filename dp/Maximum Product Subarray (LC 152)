@@ -1,0 +1,38 @@
+Problem: Maximum Product Subarray (LC 152)
+
+Pattern: Dynamic Programming
+
+Approach:
+
+1. Initialize:
+
+   * `currentMax = nums[0]`
+   * `currentMin = nums[0]`
+   * `ans = nums[0]`
+2. Traverse the array from index `1`.
+3. Store the old `currentMax` and `currentMin`.
+4. Calculate three possibilities:
+
+   * `nums[i]`
+   * `oldMax × nums[i]`
+   * `oldMin × nums[i]`
+5. Set `currentMax` to the maximum of these three values.
+6. Set `currentMin` to the minimum of these three values.
+7. Update `ans = max(ans, currentMax)`.
+8. Return `ans`.
+
+Why calculate `currentMin`?
+A negative number can turn the smallest negative product into the largest positive product.
+
+Example:
+
+```text
+-6 × -4 = 24
+```
+
+Key Idea:
+Track both *maximum and minimum because negative numbers can swap their roles.
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)

@@ -1,0 +1,31 @@
+Problem: Contiguous Array (LC 525)
+
+Pattern:
+Prefix Sum + Hash Map
+
+Approach:
+
+1. Convert `0` to `-1` and `1` to `+1`.
+2. Initialize:
+
+   * `prefixSum = 0`
+   * `ans = 0`
+   * `mp[0] = -1`
+3. Traverse the array from left to right.
+4. Update `prefixSum`:
+
+   * If `nums[i] == 0`, subtract `1`.
+   * Otherwise, add `1`.
+5. If the same `prefixSum` has appeared before:
+
+   * Calculate `length = i - mp[prefixSum]`.
+   * Update `ans` with the maximum length.
+6. If the `prefixSum` appears for the first time, store its index in the map.
+7. Return `ans`.
+
+*Key Idea:
+Same prefix sum means the elements between those two indices have sum `0`, which means they contain an equal number of `0`s and `1`s.
+
+Time Complexity: O(n)
+
+Space Complexity: O(n)
