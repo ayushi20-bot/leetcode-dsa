@@ -1,0 +1,21 @@
+Problem: Container With Most Water (LC 11)
+
+Pattern: Two Pointers
+
+Approach:
+
+1. Initialize two pointers:
+   left = 0
+   right = height.size() - 1
+2. Initialize maxArea = 0.
+3. Calculate the area using the shorter height and width.
+4. Update maxArea.
+5. If height[left] < height[right], move left++.
+6. Otherwise, move right--.
+7. Continue until left < right is false.
+8. Return maxArea.
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)
+
