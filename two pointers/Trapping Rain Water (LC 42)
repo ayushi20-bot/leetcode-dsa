@@ -1,0 +1,27 @@
+Problem: Trapping Rain Water (LC 42)
+
+Pattern: Two Pointers
+
+Approach:
+
+1. Initialize left = 0 and right = height.size() - 1.
+2. Initialize leftMax = 0, rightMax = 0, and water = 0.
+3. Compare height[left] and height[right].
+4. If height[left] < height[right], process the left side.
+5. If height[left] >= leftMax, update leftMax.
+6. Otherwise, add leftMax - height[left] to water.
+7. Move left++.
+8. Otherwise, process the right side.
+9. If height[right] >= rightMax, update rightMax.
+10. Otherwise, add rightMax - height[right] to water.
+11. Move right--.
+12. Continue until left < right is false.
+13. Return water.
+
+Key idea:
+leftMax = tallest wall seen from the left.
+rightMax = tallest wall seen from the right.
+Water = maximum wall - current bar height.
+
+Time Complexity: O(n)
+Space Complexity: O(1)

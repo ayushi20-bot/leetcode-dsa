@@ -1,0 +1,16 @@
+Problem: Two Sum II - Input Array Is Sorted (LC 167)
+
+Pattern: Two Pointers
+
+Approach:
+
+1. Initialize left = 0 and right = nums.size() - 1.
+2. Calculate sum = nums[left] + nums[right].
+3. If sum == target, return {left + 1, right + 1}.
+4. If sum > target, move right-- because the sum is too big.
+5. If sum < target, move left++ because the sum is too small.
+6. Continue until the pair is found.
+7. Return an empty vector if no pair is found.
+
+Time Complexity: O(n)
+Space Complexity: O(1)

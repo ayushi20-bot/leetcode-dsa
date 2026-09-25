@@ -1,0 +1,19 @@
+Problem: 3Sum (LC 15)
+
+Pattern: Two Pointers + Sorting
+
+Approach:
+
+1. Sort the array.
+2. Fix one number using a loop.
+3. Use two pointers, one after the fixed number and one at the end.
+4. Calculate the sum of the three selected numbers.
+5. If the sum is 0, store the triplet and move both pointers.
+6. If the sum is less than 0, move the left pointer because we need a bigger number.
+7. If the sum is greater than 0, move the right pointer because we need a smaller number.
+8. Skip duplicate values to avoid duplicate triplets.
+9. Return the answer.
+
+Time Complexity: O(n²)
+Space Complexity: O(1) extra
+

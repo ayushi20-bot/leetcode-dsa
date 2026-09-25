@@ -1,0 +1,15 @@
+Problem: Reverse String (LC 344)
+
+Pattern: Two Pointers
+
+Approach:
+
+1. Initialize one pointer at the beginning and another at the end.
+2. Swap the characters at both pointers.
+3. Move the left pointer toward the right.
+4. Move the right pointer toward the left.
+5. Continue until both pointers meet or cross.
+6. The string is reversed in place, so no extra array is needed.
+
+Time Complexity: O(n)
+Space Complexity: O(1)

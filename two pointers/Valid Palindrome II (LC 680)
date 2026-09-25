@@ -1,0 +1,22 @@
+Problem: Valid Palindrome II (LC 680)
+
+Pattern: Two Pointers
+
+Approach:
+
+1. Use two pointers, one at the beginning and one at the end.
+2. Compare the characters at both pointers.
+3. If they are equal, move both pointers inward.
+4. If they are different, this is the one character we are allowed to remove.
+5. Try skipping the left character and check whether the remaining part is a palindrome.
+6. Also try skipping the right character and check whether the remaining part is a palindrome.
+7. If either option forms a palindrome, return true.
+8. If all characters match without needing a removal, return true.
+9. Otherwise, return false.
+
+Key Idea:
+At the first mismatch, we get only one chance to remove a character. Check both possible removals.
+
+Time Complexity: O(n)
+
+Space Complexity: O(n) due to the helper function receiving the string by value.

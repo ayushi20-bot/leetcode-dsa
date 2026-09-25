@@ -16,14 +16,8 @@ Otherwise, update:
 
 leftSum += nums[i];
 If no pivot index exists, return -1.
-Formula
-Total Sum
-=
-Left Sum
-+
-Current Element
-+
-Right Sum
+
+Formula: Total Sum = Left Sum + Current Element + Right Sum
 
 Therefore,
 
