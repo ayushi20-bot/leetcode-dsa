@@ -1,0 +1,22 @@
+Problem: Boats to Save People (LC 881)
+
+Pattern: Two Pointers + Sorting
+
+Approach:
+
+1. Sort the people by their weights.
+2. Use two pointers, one at the lightest person and one at the heaviest person.
+3. Initialize the number of boats as zero.
+4. Check whether the lightest and heaviest people can fit in the same boat.
+5. If they can fit, put both in the same boat and move both pointers inward.
+6. If they cannot fit, the heaviest person must go alone, so move the right pointer inward.
+7. Increase the boat count after each boat is used.
+8. Continue until everyone has been placed in a boat.
+9. Return the total number of boats.
+
+Key Idea:
+Always try to pair the heaviest person with the lightest person. If even they cannot fit together, the heaviest person must go alone.
+
+Time Complexity: O(n log n)
+
+Space Complexity: O(1) extra
