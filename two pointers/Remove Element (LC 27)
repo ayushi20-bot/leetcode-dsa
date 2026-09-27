@@ -1,0 +1,22 @@
+Problem: Remove Element (LC 27)
+
+Pattern: Two Pointers
+
+Approach:
+
+1. Use two pointers: one pointer checks every element and the other keeps track of where the next valid element should go.
+2. Start both pointers at the beginning.
+3. Check each element using the fast pointer.
+4. If the element is equal to the given value, ignore it.
+5. If the element is not equal to the given value, place it at the position of the slow pointer.
+6. Move the slow pointer forward after placing a valid element.
+7. Move the fast pointer forward after checking each element.
+8. When all elements are checked, the slow pointer represents the number of valid elements.
+9. Return the number of valid elements.
+
+Key Idea:
+The fast pointer searches for valid elements, while the slow pointer collects them at the beginning of the array.
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)
