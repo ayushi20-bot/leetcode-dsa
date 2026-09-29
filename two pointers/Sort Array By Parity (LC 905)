@@ -1,0 +1,21 @@
+Problem: Sort Array By Parity (LC 905)
+
+Pattern: Two Pointers
+
+Approach:
+
+1. Use two pointers, one at the beginning and one at the end.
+2. The left pointer should find odd numbers that are in the wrong position.
+3. The right pointer should find even numbers that are in the wrong position.
+4. If the left number is even, move the left pointer forward.
+5. If the right number is odd, move the right pointer backward.
+6. If the left number is odd and the right number is even, swap them.
+7. After swapping, move both pointers inward.
+8. Continue until the pointers meet or cross.
+9. Return the rearranged array.
+
+Key Idea: Move even numbers toward the left and odd numbers toward the right.
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)
