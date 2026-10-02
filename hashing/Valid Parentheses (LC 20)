@@ -1,0 +1,21 @@
+Problem: Valid Parentheses (LC 20)
+
+Pattern:
+Stack + Hash Map
+
+Approach:
+
+1. Create a stack to store opening brackets.
+2. Create a hash map that stores each closing bracket with its matching opening bracket.
+3. Go through every character in the string.
+4. If the character is an opening bracket, push it into the stack.
+5. If the character is a closing bracket, first check whether the stack is empty. If it is empty, return false.
+6. Compare the top of the stack with the opening bracket that matches the current closing bracket.
+7. If they are different, return false.
+8. If they match, remove the opening bracket from the stack.
+9. After processing the entire string, check whether the stack is empty.
+10. If the stack is empty, all brackets were properly matched, so return true.
+
+Time Complexity: O(n)
+
+Space Complexity: O(n)

@@ -1,0 +1,21 @@
+Problem: Group Anagrams (LC 49)
+
+Pattern:
+Hash Map + Sorting
+
+Approach:
+
+1. Create a hash map where the key is a sorted version of a word and the value is a group of anagrams.
+2. Go through every word in the input.
+3. Save the original word because the word will be sorted to create the key.
+4. Sort the characters of the word. Anagrams will produce the same sorted key.
+5. Use the sorted word as the key and add the original word to its group.
+6. After processing all words, create an answer list.
+7. Go through the hash map and add every group to the answer.
+8. Return the answer.
+
+Time Complexity: O(n × k log k)
+
+Space Complexity: O(n × k)
+
+Here, n is the number of words and k is the average length of a word.

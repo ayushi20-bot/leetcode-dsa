@@ -1,0 +1,24 @@
+Problem: Backspace String Compare (LC 844)
+
+Pattern:
+Two Pointers + Simulation
+
+Approach:
+
+1. Start two pointers from the end of both strings.
+2. Keep a separate backspace count for each string.
+3. Move backward through a string:
+
+   * If the current character is a backspace, increase the backspace count.
+   * If it is a normal character and there are pending backspaces, skip that character and reduce the count.
+   * If it is a normal character and there are no pending backspaces, stop because this is the next valid character.
+4. Do the same process for the other string.
+5. If both strings have no characters left, return true.
+6. If only one string has no characters left, return false.
+7. If the current valid characters are different, return false.
+8. If they are the same, move both pointers backward and continue.
+9. If the entire process finishes without finding a difference, return true.
+
+Time Complexity: O(n + m)
+
+Space Complexity: O(1)
