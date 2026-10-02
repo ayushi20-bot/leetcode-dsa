@@ -1,0 +1,18 @@
+Problem: Generate Parentheses (LC 22)
+
+Pattern:
+Backtracking + Recursion
+
+Approach:
+
+1. Start with an empty string and keep track of the number of opening and closing brackets used.
+2. If the number of opening brackets is less than n, add an opening bracket and continue.
+3. If the number of closing brackets is less than the number of opening brackets, add a closing bracket and continue.
+4. This creates different possible strings by exploring both valid choices.
+5. Never add a closing bracket when there is no unmatched opening bracket.
+6. When both opening and closing brackets reach n, add the completed string to the answer.
+7. Repeat this process recursively until all valid combinations are generated.
+
+Time Complexity: O(n × Cₙ), where Cₙ is the nth Catalan number.
+
+Space Complexity: O(n) for recursion, excluding the output.
