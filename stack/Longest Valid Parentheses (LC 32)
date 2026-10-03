@@ -1,0 +1,20 @@
+Problem: Longest Valid Parentheses (LC 32)
+
+Pattern:
+Stack + Index Tracking
+
+Approach:
+
+1. Create a stack to store indices of brackets.
+2. Push -1 initially as a base index before the string starts.
+3. Traverse the string from left to right.
+4. If the current character is an opening bracket, push its index into the stack.
+5. If the current character is a closing bracket, pop the top index.
+6. If the stack becomes empty after popping, push the current index as the new boundary.
+7. Otherwise, calculate the current valid length using current index minus the index at the top of the stack.
+8. Keep updating the maximum length found.
+9. Return the maximum length after processing the complete string.
+
+Time Complexity: O(n)
+
+Space Complexity: O(n)
