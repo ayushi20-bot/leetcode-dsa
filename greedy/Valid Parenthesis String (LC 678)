@@ -1,0 +1,20 @@
+Problem: Valid Parenthesis String (LC 678)
+
+Pattern:
+Greedy + Range Tracking
+
+Approach:
+
+1. Maintain two values: low and high.
+2. low represents the minimum possible number of unmatched opening brackets.
+3. high represents the maximum possible number of unmatched opening brackets.
+4. For an opening bracket, increase both low and high.
+5. For a closing bracket, decrease both low and high.
+6. For *, decrease low because it can act as a closing bracket, and increase high because it can act as an opening bracket.
+7. low should never be negative, so reset it to 0 whenever it becomes negative.
+8. If high becomes negative, return false because there are too many closing brackets to be matched.
+9. After processing the entire string, return true only if low is 0.
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)
