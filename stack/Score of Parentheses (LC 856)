@@ -1,0 +1,20 @@
+Problem: Score of Parentheses (LC 856)
+
+Pattern:
+Stack
+
+Approach:
+
+1. Use a stack to store the score of each parenthesis level.
+2. Start with 0 in the stack for the outermost level.
+3. When an opening bracket appears, start a new level by adding 0 to the stack.
+4. When a closing bracket appears, check the score at the top.
+5. If the top score is 0, the pair is (), so its score is 1.
+6. If the top score is greater than 0, the structure is (A), so its score becomes 2 × A.
+7. Remove the completed inner level and add its score to the previous level.
+8. Continue until the entire string is processed.
+9. The score remaining at the bottom level is the final answer.
+
+Time Complexity: O(n)
+
+Space Complexity: O(n)
