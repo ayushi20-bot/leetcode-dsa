@@ -1,0 +1,19 @@
+Problem: Minimum Add to Make Parentheses Valid (LC 921)
+
+Pattern:
+Greedy + Counter
+
+Approach:
+
+1. Keep a count of unmatched opening brackets.
+2. Keep a count of parentheses that need to be added.
+3. For `(`, increase the unmatched opening count.
+4. For `)`, if an unmatched `(` exists, match it by decreasing the count.
+5. If no unmatched `(` exists, add an `(` and increase the answer.
+6. After traversing the string, any remaining unmatched `(` need `)` brackets.
+7. Add the remaining opening count to the answer.
+8. Return the total additions.
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)
