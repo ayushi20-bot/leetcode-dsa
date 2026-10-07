@@ -1,0 +1,31 @@
+Problem: Remove Invalid Parentheses (LC 301)
+
+Pattern:
+BFS + Queue + Set
+
+Approach:
+
+1. Create a queue to store strings that need to be checked.
+2. Create a set to keep track of already visited strings and avoid duplicates.
+3. Start BFS with the original string.
+4. Process strings level by level. Each level represents removing one more parenthesis.
+5. Check whether the current string is valid using a balance counter.
+6. If valid, add it to the answer and mark that a valid level has been found.
+7. If a valid level has been found, do not generate strings with more removals.
+8. If not valid, try removing each `(` or `)` one at a time.
+9. Ignore non-parenthesis characters because they should never be removed.
+10. Add each unvisited new string to the queue and visited set.
+11. After processing the complete level, if a valid string was found, stop BFS.
+12. Return all valid strings from that minimum-removal level.
+
+Validity Check:
+
+1. Keep a balance counter.
+2. `(` increases balance.
+3. `)` decreases balance if an unmatched `(` exists.
+4. If `)` appears when balance is 0, the string is invalid.
+5. At the end, balance must be 0 for the string to be valid.
+
+Time Complexity: O(2^n × n)
+
+Space Complexity: O(2^n × n)
