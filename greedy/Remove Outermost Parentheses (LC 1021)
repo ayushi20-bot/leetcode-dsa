@@ -1,0 +1,31 @@
+Problem: Remove Outermost Parentheses (LC 1021)
+
+Pattern: Greedy + Balance Counter
+
+Approach:
+
+1. Initialize a balance counter to track the number of unmatched opening parentheses.
+
+2. Create an empty answer string to store the result.
+
+3. Traverse each character in the string.
+
+4. If the character is `(`:
+
+   * If balance is greater than 0, add the character to the answer because it is not an outermost opening parenthesis.
+
+   * Increase balance by 1.
+
+5. If the character is `)`:
+
+   * Decrease balance by 1 first.
+
+   * If balance is greater than 0, add the character to the answer because it is not an outermost closing parenthesis.
+
+6. Skip the outermost opening and closing parentheses of each primitive substring.
+
+7. Return the answer string.
+
+Time Complexity: O(n)
+
+Space Complexity: O(n)

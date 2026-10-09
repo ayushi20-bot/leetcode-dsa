@@ -1,0 +1,33 @@
+Problem: Minimum Insertions to Balance a Parentheses String (LC 1541)
+
+Pattern: Greedy + Balance Counter
+
+Approach:
+
+1. Initialize insertions = 0 to count the brackets that must be added.
+
+2. Initialize needed = 0 to track how many closing brackets are still required.
+
+3. Traverse each character in the string.
+
+4. If the character is `(`:
+
+   * If needed is odd, insert one `)` and decrease needed by 1 to make it even.
+
+   * Increase needed by 2 because every `(` requires two consecutive `)` brackets.
+
+5. If the character is `)`:
+
+   * Decrease needed by 1 because one required closing bracket is found.
+
+   * If needed becomes negative, insert one `(` and increase insertions by 1.
+
+   * Set needed to 1 because the inserted `(` still requires one closing bracket.
+
+6. After traversing the string, add needed to insertions because those closing brackets are still missing.
+
+7. Return the total insertions.
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)
