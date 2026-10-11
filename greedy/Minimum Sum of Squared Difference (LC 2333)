@@ -1,0 +1,20 @@
+Problem: Minimum Sum of Squared Difference (LC 2333)
+
+Pattern: Greedy + Sorting
+
+Approach:
+
+1. Calculate the absolute difference between corresponding elements of the two arrays.
+2. Count the total available operations by adding k1 and k2.
+3. Calculate the sum of all differences. If the available operations are enough to reduce every difference to zero, return 0.
+4. Sort the differences in descending order so the largest differences come first.
+5. Compare the current difference with the next difference to find the gap between them.
+6. Calculate the operations needed to reduce all the largest differences to the next level. Multiply the gap by the number of differences being reduced.
+7. If enough operations are available, reduce those differences to the next level and subtract the operations used.
+8. If there are not enough operations, distribute them among the largest differences as evenly as possible.
+9. Repeat until all operations are used or the differences reach zero.
+10. Square every remaining difference, add the squares, and return the total.
+
+Time Complexity: O(n log n)
+
+Space Complexity: O(n)

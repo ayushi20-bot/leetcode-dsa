@@ -1,0 +1,16 @@
+Problem: Sum of Squares of Special Elements (LC 2778)
+
+Pattern: Array + Divisibility
+
+Approach:
+
+1. Initialize a variable `ans` to 0 to store the sum.
+2. Traverse the array using index `i`.
+3. Check whether the array length `n` is divisible by `i + 1`.
+4. If it is divisible, the element at index `i` is a special element.
+5. Square that element and add it to `ans`.
+6. Return `ans`.
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)
