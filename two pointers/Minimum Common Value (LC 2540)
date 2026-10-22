@@ -1,0 +1,17 @@
+Problem: Minimum Common Value (LC 2540)
+
+Pattern: Two Pointers
+
+Approach:
+
+1. Initialize two pointers, i and j, at the beginning of the two sorted arrays.
+2. Compare the elements at both pointers.
+3. If both elements are equal, return that element because it is the smallest common value.
+4. If the element in the first array is smaller, move pointer i forward.
+5. If the element in the second array is smaller, move pointer j forward.
+6. Repeat until a common value is found or either pointer reaches the end of its array.
+7. If no common value is found, return -1.
+
+Time Complexity: O(n + m)
+
+Space Complexity: O(1)

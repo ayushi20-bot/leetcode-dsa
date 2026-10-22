@@ -1,0 +1,15 @@
+Problem: Find Target Indices After Sorting Array (LC 2089)
+
+Pattern: Sorting + Linear Search
+
+Approach:
+
+1. Sort the array in ascending order.
+2. Create an empty vector `ans` to store the target indices.
+3. Traverse the array from index `0` to `n-1`.
+4. If `nums[i] == target`, add index `i` to `ans` using `push_back(i)`.
+5. Return `ans`. If the target is absent, the vector remains empty.
+
+Time Complexity: O(nlog n)
+
+Space Complexity: O(n) for storing the result.

@@ -1,0 +1,19 @@
+Problem: Apply Operations on Array to Maximize Sum of Squares (LC 2897)
+
+Pattern: Greedy + Bit Manipulation
+
+Approach:
+
+1. Create an array to count how many times each bit position contains a 1 across all elements.
+2. Traverse every element and check each bit position.
+3. If a bit is set, increase the count for that bit position.
+4. Initialize the answer to 0.
+5. Repeat k times to construct k numbers.
+6. For each number, check every bit position.
+7. If a bit is available, include it in the current number and decrease its count by 1.
+8. Square the constructed number and add it to the answer, taking modulo 10^9 + 7.
+9. Return the final answer.
+
+Time Complexity: O(n + k), assuming a fixed number of bit positions.
+
+Space Complexity: O(1), because the bit-count array has a fixed size.
