@@ -1,0 +1,15 @@
+Problem: Maximum K to Sort a Permutation (LC 3644)
+
+Pattern: Bit Manipulation — Bitwise AND
+
+Approach:
+
+1. Initialize `ans = -1` to start with all bits set.
+2. Traverse the array using index `i`.
+3. If `nums[i] != i`, the element is misplaced.
+4. Perform `ans &= nums[i]` for every misplaced element to keep only common set bits.
+5. Return `max(ans, 0)`. If the array is already sorted, return `0`.
+
+Time Complexity: \\(O(n)\\)
+
+Space Complexity: \\(O(1)\\)

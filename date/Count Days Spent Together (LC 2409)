@@ -1,0 +1,18 @@
+Problem: Count Days Spent Together (LC 2409)
+
+Pattern: Date Conversion + Interval Overlap
+
+Approach:
+
+1. Create a `getDay()` function to convert a date (`"MM-DD"`) into its day number in the year.
+2. Store the number of days in each month in an array.
+3. Extract the month and day using `substr()` and convert them to integers using `stoi()`.
+4. Add the days of all previous months to the current day.
+5. Convert Alice's arrival and departure dates and Bob's arrival and departure dates into day numbers.
+6. Find the later arrival day using `max()` and the earlier departure day using `min()`.
+7. If `start > end`, return `0` because there is no overlap.
+8. Otherwise, return `end - start + 1`, including both the first and last common days.
+
+Time Complexity: \\(O(1)\\)
+
+Space Complexity: \\(O(1)\\)
