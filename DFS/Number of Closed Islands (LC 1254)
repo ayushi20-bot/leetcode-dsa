@@ -1,0 +1,19 @@
+Problem: Number of Closed Islands (LC 1254)
+
+Pattern: DFS / Flood Fill
+
+Approach:
+
+1. Traverse every cell in the grid.
+2. When an unvisited land cell (`0`) is found, call DFS.
+3. If DFS goes outside the grid, return `true` because this alone does not determine whether the island is open.
+4. If the cell contains water (`1`), return `true`.
+5. Mark the land cell as visited by changing `0` to `1`.
+6. If the land cell touches the boundary, mark the island as not closed.
+7. Explore all four directions: up, down, left, and right.
+8. Combine the results using `&&`. If any connected land cell touches the boundary, DFS returns `false`.
+9. Increase the count only if DFS returns `true`.
+
+Time Complexity: \\(O(m \times n)\\)
+
+Space Complexity: \\(O(m \times n)\\) in the worst case due to the DFS recursion stack.

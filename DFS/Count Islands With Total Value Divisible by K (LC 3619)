@@ -1,0 +1,19 @@
+Problem: Count Islands With Total Value Divisible by K (LC 3619)
+
+Pattern: DFS / Flood Fill
+
+Approach:
+
+1. Traverse every cell in the grid.
+2. If `grid[i][j] > 0`, start DFS to explore the island.
+3. Return `0` if the coordinates are out of bounds or the cell contains `0`.
+4. Store the current cell's value and mark it visited by changing it to `0`.
+5. Explore all four directions: up, down, left, and right.
+6. Add the values returned by DFS to calculate the island's total sum.
+7. Use `long long` for the island sum to prevent integer overflow.
+8. If `sum % k == 0`, increment the island count.
+9. Return the final count.
+
+Time Complexity: `O(m × n)`
+
+Space Complexity: `O(m × n)` in the worst case due to the DFS recursion stack.
