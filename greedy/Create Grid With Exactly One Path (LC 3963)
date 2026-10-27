@@ -1,0 +1,15 @@
+Problem: Create Grid With Exactly One Path (LC 3963)
+
+Pattern: Grid Construction / Greedy
+
+**Approach:**
+1. Create an `m × n` grid filled with `'#'` (obstacles).
+2. Make every cell in the first column `'.'` (free).
+3. Make every cell in the last row `'.'` (free).
+4. This creates one path: move down the first column, then right along the last row.
+5. All other cells remain obstacles, preventing alternative paths.
+6. Return the grid.
+
+**Time Complexity:** `O(m × n)`
+
+**Space Complexity:** `O(m × n)`
